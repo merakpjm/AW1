@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Dados Pessoais:</legend>
+
+            <label for="nome">Seu nome completo:</label>
+            <input type="text" id="nome" required>
+
+            <label for="nomeSocial">Seu nome social, se tiver:</label>
+            <input type="text" id="nomeSocial">
+
+            <hr>
+
+            <label for="aluno">Seu interesse na escola é ser(aluno ou professor):</label>
+            <input type="text" id="aluno" name="aluno" value="Aluno" readonly>
+
+            <hr>
+
+            <label for="genero">Qual o gênero que você mais se identifica?</label>
+                <select id="genero" name="genero" required>
+                    <option value="mulher">Mulher</option>
+                    <option value="mulherTrans">Mulher Trans</option>
+                    <option value="homem">Homem</option>
+                    <option value="homemTrans">Homem Trans</option>
+                    <option value="outro">Outro</option>
+                </select>
+
+            <label for="etnia">Em relação a sua etnia, você se considera:</label>
+                <select id="etnia" name="etnia">
+                    <option value="branco">Branco</option>
+                    <option value="pardo">Pardo</option>
+                    <option value="negro">Negro</option>
+                    <option value="amarelo">Amarelo</option>
+                    <option value="indigena">Indígena</option>
+                    <option value="outro">Outro</option>
+                </select>
+            
+            <label for="pcd">PCD?</label>
+                <input type="radio" id="pcdSim" name="pcd" value="Sim">
+                <label for="pcdSim">Sim</label>
+                <input type="radio" id="pcdNao" name="pcd" value="Não">
+                <label for="pcdNao">Não</label>
+            <hr>
+
+            <label for="cpf">Informe seu número de CPF:</label>
+            <input type="text" id="cpf" name="cpf" placeholder="999.999.999-99" pattern="\d{3}.?\d{3}.?\d{3}-?\d{2}" required><br><br>
+
+            <label for="rg">Agora o do RG:</label>
+            <input type="text" id="rg" name="rg" placeholder="99.999.999-9" required pattern="\d{2}.?\d{3}.?\d{3}-?\d{1}">
+
+            <hr>
+
+            <label for="email">Agora informe seu melhor email:</label>
+            <input type="email" id="email" >
+            <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+    <form>
+        <fieldset>
+            <legend>Agora sobre o curso...</legend>
+
+            <label for="escola">Atualmente, está matriculado(a) ensino formal?(escola ou faculdade)</label>
+            <input type="radio" id="escolaSim" name="escola" value="Sim">
+            <label for="escolaSim">Sim</label>
+            <input type="radio" id="escolaNao" name="escola" value="Não">
+            <label for="escolaNao">Não</label>
+
+            <label for="escolaridade">Qual é o seu nível de escolaridade atual ou o mais elevado que estudou?</label>
+            <input list="escolaridade" name="browser" autocomplete="on">
+            <datalist id="escolaridade">
+                <option value="Fundametal incompleto">
+                <option value="Fundamental Completo">
+                <option value="Ensino médio incompleto">
+                <option value="Ensino médio completo">
+                <option value="Ensino Técnico">
+                <option value="Graduação incompleta">
+                <option value="Graduação completa">
+                <option value="Pós-graduação ou mais">
+                <option value="Outro">
+            </datalist>
+            <hr>
+
+            <label for="curso">Qual curso você pretende fazer na nossa escola?</label>
+            <br>
+                <input type="checkbox" id="curso1" name="curso" value="informática">
+                <label for="curso1">Informática para escritório</label><br>
+                <input type="checkbox" id="curso2" name="curso" value="gestão">
+                <label for="curso2">Gestão Empresarial</label><br>
+                <input type="checkbox" id="curso3" name="curso" value="adm">
+                <label for="curso3">Adminstração</label><br>
+                <input type="checkbox" id="curso4" name="curso" value="secretario">
+                <label for="curso4">Secretáriado</label><br>
+                <input type="checkbox" id="curso5" name="curso" value="rh">
+                <label for="curso5">Recursos Humanos</label><br>
+                <input type="checkbox" id="curso6" name="curso" value="ingles">
+                <label for="curso6">Ingles profissionalizante</label><br>
+
+            <hr>
+
+            <label for="outroCurso">Você já está fazendo algum outro curso?</label>
+            <input type="radio" id="cursoSim" name="outroCurso" value="Sim">
+            <label for="cursoSim">Sim</label>
+            <input type="radio" id="cursoNao" name="outroCurso" value="Não">
+            <label for="cursoNao">Não</label>
+
+            <label for="termino">Se sim, qual a previsão de conclusão?</label>
+            <label for="data">Em quais dias da semana você está disponível para realizar o(s) curso(s)?</label>
+            <input type="month" name="diaMes" id="data" readonly>
+
+            <hr>
+            <label for="disposição">Você está disposto(a) a investir seu tempo em seu crescimento pessoal e profissional?</label>
+            <input type="radio" id="disposiçãoSim" name="disposição" value="Sim">
+            <label for="disposiçãoSim">Sim</label>
+            <input type="radio" id="disposiçãoNao" name="disposição" value="Não">
+            <label for="disposiçãoNao">Não</label>
+
+            <label for="motivação">O que te motivou a se inscrever em um de nossos cursos?</label>
+            <br>
+            <textarea name="motivação" placeholder="Deixe aqui sua motivação"></textarea>
+            <hr>
+
+            <hr>
+
+            <label for="senha">Escolha uma senha:</label>
+            <input type="password" pattern="\d{6}" title="Sua senha deve conter exatamente 6 caracteres" required>
+
+            <input type="submit" value="prontinho">
+
+        </fieldset>
+    </form>
+</body>
+</html>
